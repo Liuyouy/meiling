@@ -1,0 +1,23 @@
+console.log("加载成功");
+require.config({
+    paths:{
+        "jquery":"jquery-1.11.3",
+        "jquery-cookie":"jquery.cookie",
+        "parabola":"parabola",
+        "index":"index",
+        "slider":"slider",
+        "content":"content"
+    },
+    shim:{
+        "jquery-cookie":["jquery"],
+        "parebola":{
+            export:"_"
+        }
+    }
+})
+require(["index","slider","content"], function(index,slider,content){
+    index.nav(),
+    slider.banner(),
+    slider.tab(),
+    content.content()
+})
