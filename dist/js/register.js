@@ -1,6 +1,5 @@
-
-define(["jquery"],function($){
-    function nav(){
+define(["jquery"] ,function($){
+    function register(){
         $(function(){
             // 二维码显示
             $("#header-a,#header-img").hover(function(){
@@ -29,14 +28,11 @@ define(["jquery"],function($){
             },function(){
                 $(".nav-div4").css("display","none")
             })
-            // banner图.tab选项卡在slider.js中
-            // 内容部分在content.js中
-
+            
         })
-
     }
-
     return {
-        nav:nav
+        register:register
     }
+
 })
